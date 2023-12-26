@@ -1,3 +1,27 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<p>Check out <a href="https://bun.sh">bun.sh</a> to learn more about bun and the bun.js runtime</p>
+<script>
+</script>
+
+<svelte:head>
+	<title>honba</title>
+	<meta name="description" content="honba dashboard" />
+</svelte:head>
+
+<section>
+	<h1>Hello world</h1>
+
+	<h2>Honba dashboard</h2>
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 0.6;
+	}
+
+	h1 {
+		width: 100%;
+	}
+</style>

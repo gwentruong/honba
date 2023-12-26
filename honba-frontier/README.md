@@ -1,27 +1,28 @@
-# Sveltekit + Bun
+# create-svelte
 
-Everything you need to build a Svelte project, powered by [Bun](https://bun.sh) and the [`svelte-adapter-bun`](https://github.com/gornostay25/svelte-adapter-bun) package. Based on the [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) skeleton project.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Requirements
+## Creating a project
 
-- Node.js LTS or newer
-- Bun
-
-## Clone & Setup
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-bun create TheOtterlord/sveltekit-bun-template my-project
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
 ## Developing
 
-Once you've created a project and navigated to the root directory of the project, start a development server:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-bun run dev
+npm run dev
 
 # or start the server and open the app in a new browser tab
-bun run dev -- --open
+npm run dev -- --open
 ```
 
 ## Building
@@ -29,19 +30,9 @@ bun run dev -- --open
 To create a production version of your app:
 
 ```bash
-bun run build
+npm run build
 ```
 
-To skip type-checking when building for production, instead use:
+You can preview the production build with `npm run preview`.
 
-```
-bun run build:force
-```
-
-You can preview the production build with `bun run preview`.
-In the production environment, you can use `bun ./build/index.js` to run the production server.
-
-## Important notes
-
-- Vite will not type-check on the development server. This is a known issue with Sveltekit and more information can be found [here](https://github.com/ivanhofer/sveltekit-typescript-showcase#type-checking-the-whole-project). Run `bun run check` or `bun run check:watch` if you need type-checking during development.
-- The Bun runtime is not used for the development server or any build or check processes. Vite instead uses the Node.js runtime. Bun is only used to run the production server. 
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
